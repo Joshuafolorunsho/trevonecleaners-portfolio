@@ -151,7 +151,16 @@ export const Footer = () => {
         </div>
         <hr className="my-6 lg:my-8" />
         <p className=" text-center font-open-sans text-lg text-gray-850">
-          <span> &copy; 2023 Trevone Nigeria. All rights reserved</span>
+          <span> &copy; 2023 Trevone Nigeria. </span> Built by
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://linkedin.com/in/joshuafolorunsho"
+            className="text-primary-100"
+          >
+            {' '}
+            Joshua Folorunsho
+          </a>
         </p>
       </div>
     </footer>
