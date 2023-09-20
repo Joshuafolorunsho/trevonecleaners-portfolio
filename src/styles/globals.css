@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 2px #99cedc;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #99cedc;
+  }
+}
+
+.container {
+  @apply px-6;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
