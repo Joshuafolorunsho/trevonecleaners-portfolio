@@ -55,8 +55,8 @@ export const FAQ: React.FC<FAQProps> = ({ bgColor = '' }) => {
           {faqs.map((faq) => (
             <Disclosure key={faq.title}>
               {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-white px-4 py-2 text-left text-sm font-medium text-gray-950 hover:bg-primary-300 hover:bg-opacity-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                <div className='bg-white group'>
+                  <Disclosure.Button className={clsx("flex w-full items-center justify-between px-4 py-2 text-left text-sm font-medium text-gray-950 hover:bg-primary-300 hover:bg-opacity-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75", open ? "rounded-t-lg" : "rounded-lg")}>
                     <h3 className="text-lg">{faq.title}</h3>
                     <div className={clsx('transform', open ? 'rotate-180' : '')}>
                       {open ? (
@@ -108,10 +108,10 @@ export const FAQ: React.FC<FAQProps> = ({ bgColor = '' }) => {
                       )}
                     </div>
                   </Disclosure.Button>
-                  <Disclosure.Panel className="border-t bg-white px-4 pb-2 pt-4 text-sm text-gray-500">
+                  <Disclosure.Panel className="px-4 pb-2 pt-4 text-sm text-gray-500 group-hover:bg-primary-300 group-hover:bg-opacity-10">
                     {faq.description}
                   </Disclosure.Panel>
-                </>
+                </div>
               )}
             </Disclosure>
           ))}
